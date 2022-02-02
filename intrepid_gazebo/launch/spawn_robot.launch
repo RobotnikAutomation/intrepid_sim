@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- arg to config the launch file-->
+  <arg name="robot_id" default="$(optenv ROBOT_ID robot)"/>
+  <arg name="prefix" default="$(arg robot_id)_"/>
+
+  <arg name="kinova_robotType" default="j2s6s200"/>
+  <arg name="kinova_robotName" default="$(arg kinova_robotType)"/>
+
+  <!-- Robot configuration -->
+  <arg name="x_init_pose" default="0"/>
+  <arg name="y_init_pose" default="0"/>
+  <arg name="z_init_pose" default="0"/>
+  <arg name="a_init_pose" default="0"/>
+
+  <!-- Spawn model into gazebo -->
+  <node name="urdf_spawner_robot_model" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+      args="-x $(arg x_init_pose) -y $(arg y_init_pose) -z $(arg z_init_pose) -Y $(arg a_init_pose) -urdf -param robot_description -model $(arg robot_id)
+        -param robot_description
+        -J $(arg kinova_robotType)_joint_1 0.0
+        -J $(arg kinova_robotType)_joint_2 2.9
+        -J $(arg kinova_robotType)_joint_3 1.3
+        -J $(arg kinova_robotType)_joint_4 -2.07
+        -J $(arg kinova_robotType)_joint_5 1.4
+        -J $(arg kinova_robotType)_joint_6 0.0
+        -J $(arg kinova_robotType)_joint_finger_1 1.0
+        -J $(arg kinova_robotType)_joint_finger_2 1.0
+        -unpause" />
+
+</launch>
