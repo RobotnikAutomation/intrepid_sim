@@ -15,3 +15,6 @@
 [submodule "joint_read_command_controller"]
 	path = joint_read_command_controller
 	url = https://github.com/RobotnikAutomation/joint_read_command_controller
+[submodule "teleop_panel"]
+	path = teleop_panel
+	url = https://github.com/RobotnikAutomation/teleop_panel
