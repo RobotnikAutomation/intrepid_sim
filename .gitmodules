@@ -12,3 +12,6 @@
 [submodule "robotnik_pad"]
 	path = robotnik_pad
 	url = https://github.com/RobotnikAutomation/robotnik_pad
+[submodule "joint_read_command_controller"]
+	path = joint_read_command_controller
+	url = https://github.com/RobotnikAutomation/joint_read_command_controller
