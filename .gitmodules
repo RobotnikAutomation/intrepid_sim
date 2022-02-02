@@ -1,0 +1,14 @@
+[submodule "kinova-ros"]
+	path = kinova-ros
+	url = https://github.com/RobotnikAutomation/kinova-ros
+	branch = develop
+[submodule "rbvogui_common"]
+	path = rbvogui_common
+	url = https://github.com/RobotnikAutomation/rbvogui_common
+	branch = melodic-devel
+[submodule "robotnik_sensors"]
+	path = robotnik_sensors
+	url = https://github.com/RobotnikAutomation/robotnik_sensors
+[submodule "robotnik_pad"]
+	path = robotnik_pad
+	url = https://github.com/RobotnikAutomation/robotnik_pad
