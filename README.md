@@ -1,4 +1,4 @@
-# intrepid_sim description
+# intrepid_sim 
 RB-Vogui + Kinova Jaco Intrepid simulation repository 
 
 ## Install repository
