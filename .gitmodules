@@ -1,20 +1,20 @@
 [submodule "kinova-ros"]
-	path = kinova-ros
+	path = robot/kinova-ros
 	url = https://github.com/RobotnikAutomation/kinova-ros
 	branch = develop
 [submodule "rbvogui_common"]
-	path = rbvogui_common
+	path = robot/rbvogui_common
 	url = https://github.com/RobotnikAutomation/rbvogui_common
 	branch = melodic-devel
 [submodule "robotnik_sensors"]
-	path = robotnik_sensors
+	path = robot/robotnik_sensors
 	url = https://github.com/RobotnikAutomation/robotnik_sensors
 [submodule "robotnik_pad"]
-	path = robotnik_pad
+	path = robot/robotnik_pad
 	url = https://github.com/RobotnikAutomation/robotnik_pad
 [submodule "joint_read_command_controller"]
-	path = joint_read_command_controller
+	path = robot/joint_read_command_controller
 	url = https://github.com/RobotnikAutomation/joint_read_command_controller
 [submodule "teleop_panel"]
-	path = teleop_panel
+	path = robot/teleop_panel
 	url = https://github.com/RobotnikAutomation/teleop_panel
