@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <!-- rbvogui v3.0 -->
-<robot name="rbvogui" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="intrepid" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 
     <!-- ***************** -->
@@ -41,9 +41,13 @@
     <xacro:property name="rocker_offset_z" value="0.130" />    
     
     <!-- RS-Lidar -->
-    <xacro:property name="top_lidar_offset_x" value="0.343" />
+<!--     <xacro:property name="top_lidar_offset_x" value="0.343" />
     <xacro:property name="top_lidar_offset_y" value="0.0" />
     <xacro:property name="top_lidar_offset_z" value="1.302" />
+ -->
+    <xacro:property name="top_lidar_offset_x" value="0.260" />
+    <xacro:property name="top_lidar_offset_y" value="0.0" />
+    <xacro:property name="top_lidar_offset_z" value="0.606" />
   
     <!-- Basket parameters -->
     <xacro:property name="basket_offset_x" value="0.0" />    
@@ -65,7 +69,7 @@
 
 
 
-    <xacro:macro name="rbvogui" params="prefix publish_bf hq gpu">
+    <xacro:macro name="intrepid" params="prefix publish_bf hq gpu">
 
         <!-- *************** -->
         <!-- Robots Elements -->
@@ -120,9 +124,9 @@
         </xacro:sensor_imu_hector>
 
         <!-- GPS -->
-        <xacro:sensor_gps prefix="${prefix}gps" parent="${prefix}base_link">
+<!--         <xacro:sensor_gps prefix="${prefix}gps" parent="${prefix}base_link">
             <origin xyz="0.344 -0.128 1.212" rpy="0 0 0"/>
-        </xacro:sensor_gps>
+        </xacro:sensor_gps> -->
 
         <!-- RS-Lidar -->
         <xacro:sensor_rslidar_16 prefix="${prefix}top_3d_laser" parent="${prefix}base_link" prefix_topic="top_3d_laser" gpu="${gpu}">
@@ -143,6 +147,6 @@
     <!-- Gazebo ros control pluggins -->
     <xacro:ros_control/>
 
-    <xacro:rbvogui prefix="$(arg prefix)" publish_bf="${publish_bf}" hq="${hq}" gpu="${gpu}"/>
+    <xacro:intrepid prefix="$(arg prefix)" publish_bf="${publish_bf}" hq="${hq}" gpu="${gpu}"/>
 
 </robot>
