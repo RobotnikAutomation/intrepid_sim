@@ -20,7 +20,8 @@
   <!-- Simulation configuration -->
   <arg name="sim" default="$(optenv SIM_CONTROLLER true)"/>
   <arg name="world" default="worlds/intrepid.world)" /> <!-- demo.world, rbvogui.world -->
-  <arg name="world_file" default="$(eval find(world_package) + '/' + world)"/> 
+  <!-- <arg name="world_file" default="$(eval find(world_package) + '/' + world)"/>  -->
+  <arg name="world_file" default="$(find intrepid_gazebo)/worlds/intrepid.world"/> 
   <arg name="debug" default="false"/>
   <arg name="paused" default="true"/>
   <arg name="headless" default="false"/>
