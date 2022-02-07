@@ -65,11 +65,12 @@
     <xacro:property name="publish_bf" value="true" />
 
     <xacro:arg name="prefix" default="robot_" />
+    <xacro:arg name="prefix_topic" default="robot" />
     <xacro:property name="gpu" default="false" />
 
 
 
-    <xacro:macro name="intrepid" params="prefix publish_bf hq gpu">
+    <xacro:macro name="intrepid" params="prefix prefix_topic publish_bf hq gpu">
 
         <!-- *************** -->
         <!-- Robots Elements -->
@@ -139,7 +140,7 @@
         </xacro:sensor_sick_tim551>
  -->
         <!-- Kinova arm -->
-        <xacro:kinova_j2s6s200 parent="${prefix}base_link" x_position="${kinova_offset_x}" y_position="${kinova_offset_y}" z_position="${kinova_offset_z}"/>
+        <xacro:kinova_j2s6s200 parent="${prefix}base_link" x_position="${kinova_offset_x}" y_position="${kinova_offset_y}" z_position="${kinova_offset_z}" prefix_topic="${prefix_topic}"/>
     
     </xacro:macro>
 
@@ -147,6 +148,6 @@
     <!-- Gazebo ros control pluggins -->
     <xacro:ros_control/>
 
-    <xacro:intrepid prefix="$(arg prefix)" publish_bf="${publish_bf}" hq="${hq}" gpu="${gpu}"/>
+    <xacro:intrepid prefix="$(arg prefix)" prefix_topic="$(arg prefix_topic)" publish_bf="${publish_bf}" hq="${hq}" gpu="${gpu}"/>
 
 </robot>
