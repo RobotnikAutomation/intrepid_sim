@@ -17,4 +17,14 @@ Compile repository:
 
 ## Run simulation
 
+To launch simulation:
+
 `roslaunch intrepid_sim_bringup intrepid_complete.launch`
+
+To move the arm: 
+
+`ROS_NAMESPACE=robot rosrun rqt_joint_trajectory_controller rqt_joint_trajectory_controller`
+
+To display available controllers: 
+
+`rosservice call /robot/controller_manager/list_controllers`
